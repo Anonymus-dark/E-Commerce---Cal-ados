@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+
+    --font-global:'Roboto', sans-serif;
+
+    --cor-preto-claro:rgb(61 61 61);
+    --cor-preto-escuro:#000000;
+    --cor-branco-claro2:rgb(239 239 239);
+
+    --cor-preto-escuro-transparente:rgba(0, 0, 0, 0.088);
+    --cor-preto-claro-transparente:rgba(61, 61, 61, 0.825);
+
+    --cor-vermelho-claro:#b8235a;
+
+    --sombra-direita:2px 1px 6px -3px #000000;
+    --sombra-360:0px 0px 6px -2px #000000;
+    --sombra-baixo:0px 3px 6px -3px #000000;
+    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-global);
+    background: #C9CCD3;
+}
+
+    body::-webkit-scrollbar{
+        width: 0px;
+    }
+
+    /* Cabeçalho */
+
+.cabecalho{
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    background-color: var(--cor-preto-escuro-transparente);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 40px;
+    box-shadow: var(--sombra-baixo);
+}
+
+.cabecalho__botao{
+    width: 55px;
+    min-height: 55px;
+    height: 55px;
+    max-height: 55px;
+    border: none;
+    outline: 0;
+    background-color: var(--cor-preto-claro);
+    border-radius: 8px 8px 0px 0px;
+}
+.botao__imagem{
+    width: 30px;
+}
+
+.produto{
+    width: 100%;
+    height: 100%;
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten;
+    background-size: 100% 100%;
+    padding: 80px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto__informacoes{
+    box-sizing: border-box;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    height: calc(40% - 40px);
+    min-height: 30%;
+    max-height: 30%;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.informacoes__tipo{
+    font-size: 15px;
+    border-bottom: 4px solid var(--cor-vermelho-claro);
+    padding-bottom: 10px;
+}
+
+.informacoes__espeficicacao{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 4px solid var(--cor-vermelho-claro);
+    padding-bottom: 10px;
+}
+
+    .espeficicacao__categoria{
+        
+    }
+
+    .espeficicacao__marca{
+
+    }
+
+    .espeficicacao__nome{
+
+    }
+
+    .espeficicacao__sexo{
+
+    }
+
+    .informacoes__disponibilidade{
+        font-size: 25px;
+        color: var(--cor-preto-claro);
+    }
+
+    .informacoes__comprar{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .comprar__botao{
+        width: 90%;
+        max-width: 500px;
+        height: 100%;
+        border: none;
+        outline: 0;
+        border-radius: 16px;
+        background-color:rgba(120, 209, 31, 0.855);
+        box-shadow: var(--sombra-360);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.produto__imagens{
+    box-sizing: border-box;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.imagens__imagemGlobal{
+    width: 40%;
+    min-width: 285px;
+    margin: 1px;
+}
+
+
+
+@media (min-width:901px){
+
+    .produto{
+        width: 100%;
+        height: auto;
+        padding: 100px 0px 40px 0px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    
+    .produto__informacoes{
+        width: calc( 30% - 40px );
+        min-width: calc( 30% - 40px );
+        max-width: calc( 30% - 40px );
+        height: 40%;
+        min-height: 40%;
+        max-height: 40%;
+        margin-right: 40px;
+    }
+    
+    .informacoes__tipo{
+        font-size: 15px;
+    }
+    
+    .informacoes__espeficicacao{
+        font-size: 20px;
+    }
+    
+        .informacoes__disponibilidade{
+            font-size: 25px;
+            color: var(--cor-preto-claro);
+        }
+    
+    .produto__imagens{
+        width: calc( 70% - 40px );
+        min-width: calc( 70% - 40px );
+        max-width: calc( 70% - 40px );
+        height: auto;
+    }
+}
